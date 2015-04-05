@@ -2,4 +2,7 @@ PAdmin = {}
 
 AddCSLuaFile("autorun/client/cl_init.lua")
 
-AddCSLuaFile("padmin/core/server/sql.lua")
+include("padmin/core/server/sql.lua")
+PAdmin.Database.Create()
+
+include("padmin/core/server/rank.lua")
