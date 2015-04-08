@@ -1,11 +1,18 @@
 
+local function hasValue(tab)
+	for k,v in pairs(tab) do
+		return true
+	end
+	return false
+end
+
 local function GetDefaultRanks()
 	local ranks = {}
 	ranks.user = {
 		privileges = {noclip = {target = 0}, god = {target = 0}},
 		restrictions = {tools = {"dynamite", "emitter", "duplicator"}, models = {"models/props_c17/oildrum001_explosive.mdl"}},
 		limits = {sbox_maxprops = 150},
-		variables = {team = "user", immunity = 0, defaultrank = true}}
+		variables = {team = "user", immunity = 0, defaultrank = true, default = true}}
 
 	ranks.admin = {
 		privileges = {noclip = {target = 2}, god = {target = 2}, goto = {target = 3}, kick = {target = 1}, ban = {target = 1, maxtime = 20160}},
@@ -24,7 +31,7 @@ end
 
 function PAdmin.LoadRanks() 
 	local ranks = PAdmin.Database.GetRanks()
-	if #ranks >= 1 then
+	if ranks and hasValue(ranks) then
 		PAdmin.Ranks = ranks
 		print("rank")
 	else
@@ -35,6 +42,15 @@ function PAdmin.LoadRanks()
 		end
 		print("norank")
 	end
+end
+
+function PAdmin.GetDefaultRank()
+	for rankid,rank in pairs(PAdmin.Ranks) do
+		if rank.variables.default then
+			return rankid
+		end
+	end
+	return nil
 end
 
 function PAdmin.SetRank(ply, rank)
@@ -81,3 +97,7 @@ function PAdmin.PlyHasPrivilege(ply, priv)
 	end
 	return false
 end
+
+//////////////////////////////////////////////////////////////////////////////
+
+PAdmin.LoadRanks()

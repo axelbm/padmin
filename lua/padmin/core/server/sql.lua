@@ -3,19 +3,15 @@ local Database = {}
 function Database.Create()
 	if not sql.TableExists("padmin_settings") then
 		sql.Query("CREATE TABLE padmin_settings (name TEXT PRIMARY KEY, variables TEXT);")
-		print("PAdmin settings database settup.")
 	end
 	if not sql.TableExists("padmin_ranks") then
 		sql.Query("CREATE TABLE padmin_ranks (rankid TEXT PRIMARY KEY, privileges TEXT, restrictions TEXT, limits TEXT, variables TEXT);")
-		print("PAdmin ranks database settup.")
 	end
 	if not sql.TableExists("padmin_teams") then
 		sql.Query("CREATE TABLE padmin_teams (teamid TEXT PRIMARY KEY, teamname TEXT, variables TEXT);")
-		print("PAdmin teams database settup.")
 	end
 	if not sql.TableExists("padmin_players") then
-		sql.Query("CREATE TABLE padmin_players (steamid TEXT PRIMARY KEY, rank TEXT, team TEXT, baninfo TEXT, variables Text);")
-		print("PAdmin players database settup.")
+		sql.Query("CREATE TABLE padmin_players (steamid TEXT PRIMARY KEY, nickname TEXT, rank TEXT, team TEXT, lastconnection INTEGER, baninfo TEXT, variables Text);")
 	end
 end
 
@@ -75,27 +71,52 @@ function Database.UpdateRank(rankid, privileges, restrictions, limits, variables
 	sql.Query("UPDATE padmin_ranks SET privileges='" .. util.TableToJSON(privileges) .. "', restrictions='" .. util.TableToJSON(restrictions) .. "', limits='" .. util.TableToJSON(limits) .. "', variables='" .. util.TableToJSON(variables) .. "' WHERE rankid='" .. util.TableToJSON(rankid) .. "';")
 end
 
+function Database.SaveRank(rankid, rank)
+	sql.Query("UPDATE padmin_ranks SET privileges='" .. util.TableToJSON(rank.privileges) .. "', restrictions='" .. util.TableToJSON(rank.restrictions) .. "', limits='" .. util.TableToJSON(rank.limits) .. "', variables='" .. util.TableToJSON(rank.variables) .. "' WHERE rankid='" .. util.TableToJSON(rankid) .. "';")
+end
+
 function Database.RemoveRank(rankid)
 	sql.Query("DELETE FROM padmin_ranks WHERE rankid='" .. rankid .. "';")
 end
 
+
+
 // Players
 
 function Database.GetPlayer(steamid)
-	return sql.Query("SELECT * FROM padmin_players WHERE steamid='" .. steamid .. "'")
+	local plyinfo = sql.QueryRow("SELECT * FROM padmin_players WHERE steamid='" .. steamid .. "'", 1)
+
+	if plyinfo then
+		local padminply = {
+			nickname = plyinfo.nickname,
+			rank = plyinfo.rank,
+			team = plyinfo.team,
+			lastconnection = plyinfo.lastconnection,
+			baninfo = util.JSONToTable(plyinfo.baninfo),
+			variables = util.JSONToTable(plyinfo.variables)}
+
+		return padminply
+	end
+	return nil
+end
+function Database.AddPlayer(steamid, nickname, rank, team, variables)
+	sql.Query("INSERT INTO padmin_players VALUES ('" .. steamid .. "', '" .. nickname .. "', '" .. rank .. "', '" .. team .. "', '" .. os.time() .. "', '" .. "{}" .. "', '" .. util.TableToJSON(variables) .. "');")
 end
 
-function Database.AddPlayer(steamid, rank, team, variables)
-	sql.Query("INSERT INTO padmin_players VALUES ('" .. steamid .. "', '" .. rank .. "', '" .. team .. "', '', '" .. util.TableToJSON(variables) .. "');")
+function Database.UpdatePlayer(steamid, nickname, rank, team, lastconnection, baninfo, variables)
+	sql.Query("UPDATE padmin_players nickname='" .. nickname .. "', rank='" .. rank .. "', team='" .. team .. "', lastconnection='" .. lastconnection .. "', baninfo='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', variables='" .. util.TableToJSON(variables) .. "' WHERE steamid='" .. steamid .. "';")
 end
 
-function Database.UpdatePlayer(steamid, rank, team, baninfo, variables)
-	sql.Query("UPDATE padmin_players rank='" .. rank .. "', team='" .. team .. "', baninfo='" .. baninfo .. "', variables='" .. util.TableToJSON(variables) .. "' WHERE steamid='" .. steamid .. "';")
+function Database.SavePlayer(ply)
+	sql.Query("UPDATE padmin_players SET nickname='" .. ply:Nick() .. "', rank='" .. ply.PAdmin.rank .. "', team='" .. ply.PAdmin.team .. "', lastconnection='" .. ply.PAdmin.lastconnection .. "', baninfo='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', variables='" .. util.TableToJSON(ply.PAdmin.variables) .. "' WHERE steamid='" .. ply:SteamID() .. "';")
 end
 
 function Database.RemovePlayer(steamid)
 	sql.Query("DELETE FRMO padmin_players WHERE steamid='" .. steamid .. "'")
 end
 
-
 PAdmin.Database = Database
+
+//////////////////////////////////////////////////////////////////////////////
+
+PAdmin.Database.Create()
