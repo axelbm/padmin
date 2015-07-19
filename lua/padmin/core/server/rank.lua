@@ -9,22 +9,25 @@ end
 local function GetDefaultRanks()
 	local ranks = {}
 	ranks.user = {
+		group = "",
 		privileges = {noclip = {target = 0}, god = {target = 0}},
 		restrictions = {tools = {"dynamite", "emitter", "duplicator"}, models = {"models/props_c17/oildrum001_explosive.mdl"}},
 		limits = {sbox_maxprops = 150},
 		variables = {team = "user", immunity = 0, defaultrank = true, default = true}}
 
 	ranks.admin = {
+		group = "",
 		privileges = {noclip = {target = 2}, god = {target = 2}, goto = {target = 3}, kick = {target = 1}, ban = {target = 1, maxtime = 20160}},
 		restrictions = {},
 		limits = {sbox_maxprops = 400},
-		variables = {team = "user", immunity = 50, defaultrank = true, admin = true}}
+		variables = {team = "admin", immunity = 50, defaultrank = true, admin = true}}
 
 	ranks.superadmin = {
+		group = "",
 		privileges = {noclip = {target = 2}, god = {target = 2}, goto = {target = 3}, kick = {target = 2}, ban = {target = 1, prema = true}},
 		restrictions = {},
 		limits = {sbox_maxprops = -1},
-		variables = {team = "user", immunity = 100, defaultrank = true, admin = true, superadmin = true}}
+		variables = {team = "superadmin", immunity = 100, defaultrank = true, admin = true, superadmin = true}}
 
 	return ranks 
 end
@@ -38,7 +41,7 @@ function PAdmin.LoadRanks()
 		PAdmin.Ranks = GetDefaultRanks()
 
 		for name,rank in pairs(PAdmin.Ranks) do
-			PAdmin.Database.AddRank(name, rank.privileges, rank.restrictions, rank.limits, rank.variables)
+			PAdmin.Database.AddRank(name, rank.group, rank.privileges, rank.restrictions, rank.limits, rank.variables)
 		end
 		print("norank")
 	end
@@ -54,19 +57,29 @@ function PAdmin.GetDefaultRank()
 end
 
 function PAdmin.SetRank(ply, rank)
-	ply.PAdmin.Rank = rank
+	ply.PAdmin.rank = rank
+	PAdmin.Database.SavePlayer(ply)
 end
 
 function PAdmin.PlyBetterThan(pl1, pl2)
-	if PAdmin.Ranks[pl1.PAdmin.Rank].variables.immunity > PAdmin.Ranks[pl2.PAdmin.Rank].variables.immunity then
+	if PAdmin.Ranks[pl1.PAdmin.rank].variables.immunity > PAdmin.Ranks[pl2.PAdmin.rank].variables.immunity then
 		return true
 	end
 	return false
 end
 
 function PAdmin.PlyBetterThanOrEqual(pl1, pl2)
-	if PAdmin.Ranks[pl1.PAdmin.Rank].variables.immunity >= PAdmin.Ranks[pl2.PAdmin.Rank].variables.immunity then
+	if PAdmin.Ranks[pl1.PAdmin.rank].variables.immunity >= PAdmin.Ranks[pl2.PAdmin.rank].variables.immunity then
 		return true
+	end
+	return false
+end
+
+function PAdmin.PlayerGetAccess(ply, priv)
+	local access = PAdmin.Ranks[ply.PAdmin.rank].privileges[priv]
+
+	if access then
+		return access
 	end
 	return false
 end
@@ -86,14 +99,6 @@ function PAdmin.PlayerCanTarget(pl1, pl2, privlvl)
 		end
 	elseif privlvl == 3 then
 		return true
-	end
-	return false
-end
-
-function PAdmin.PlyHasPrivilege(ply, priv)
-	local param = PAdmin.Ranks[pl1.PAdmin.Rank].privileges[priv]
-	if param then
-		return param
 	end
 	return false
 end

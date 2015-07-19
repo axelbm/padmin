@@ -1,0 +1,715 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Istable",
+				"istable"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"paf",
+				"PassesTriggerFilters"
+			],
+			[
+				"pr",
+				"preg_replace"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mon",
+				"monthname"
+			],
+			[
+				"date",
+				"date_format"
+			],
+			[
+				"preg_",
+				"preg_replace"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"iss",
+				"is_string"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"il",
+				"inline-block"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"wh",
+				"width"
+			],
+			[
+				"bod",
+				"border"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"lower",
+				"ctype_lower"
+			],
+			[
+				"db",
+				"db"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"tab",
+				"tab"
+			],
+			[
+				"erro",
+				"error_num"
+			],
+			[
+				"err",
+				"error_arr"
+			],
+			[
+				"user",
+				"user_info_req"
+			],
+			[
+				"session_d",
+				"session_destroy"
+			],
+			[
+				"member",
+				"members_list"
+			],
+			[
+				"is_s",
+				"is_string"
+			],
+			[
+				"is_in",
+				"is_int"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"concommand",
+				"concommand.Add"
+			],
+			[
+				"util",
+				"util.AddNetworkString"
+			],
+			[
+				"conc",
+				"concommand.Add"
+			],
+			[
+				"Makep",
+				"MakePopup"
+			],
+			[
+				"SRP",
+				"SRPSendStamina"
+			],
+			[
+				"DrawO",
+				"DrawOutlinedRect"
+			],
+			[
+				"sur",
+				"surface.DrawRect"
+			],
+			[
+				"net",
+				"net.Receive"
+			],
+			[
+				"Langu",
+				"Language"
+			],
+			[
+				"funct",
+				"function	function"
+			],
+			[
+				"lua",
+				"lua"
+			],
+			[
+				"ci",
+				"client"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"mari",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"list-s",
+				"list-style-type"
+			],
+			[
+				"pan",
+				"padding"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"width",
+				"max-width"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"font-",
+				"font-family"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "gm",
+		"selected_items":
+		[
+			[
+				"gm",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"g",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"gmod",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"glua",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"gml",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"md",
+				"Set Syntax: Markdown"
+			],
+			[
+				"gmo",
+				"Set Syntax: Gmod Lua"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"echo qwe"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/playercore/lua/entities/gmod_wire_expression2/core/custom/playercore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/damagecore/lua/entities/gmod_wire_expression2/core/custom/damagecore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/damagecore/lua/entities/gmod_wire_expression2/core/custom/damagecore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/data/expression2/e2shared/autoholo/turret_razon_cannon.txt",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/papate_healthhud/lua/autorun/healthhud.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/shard/plugin.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_slay.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/autorun/server/init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/autorun/client/cl_init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_framework.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sv_consolecommands.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sv_chatcommands.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_ranks.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_speed.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_slap.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/ulx/lua/ulx/sh_base.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/ulx/lua/ulx/modules/sh/rcon.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/ulx/lua/ulx/xgui/maps.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/shard/commands.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/server/sql.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/table.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/globalvars.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/ranger.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/plugins/sv_test.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/debug.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/wire/client/wire_expression2_editor.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/entity.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/wire/stools/expression2.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/vector.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/string.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/bone.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/wire/lua/entities/gmod_wire_expression2/core/extpp.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/weaponcore/lua/entities/gmod_wire_expression2/core/custom/weaponcore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/weaponcore/addon.json",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/weaponcore/lua/entities/gmod_wire_expression2/core/custom/cl_weaponcore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/server/player.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/server/rank.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_jail.lua",
+		"/C/Users/Axel Michaud/Desktop/weaponcore/lua/entities/gmod_wire_expression2/core/custom/weaponcore.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/weaponcore/README.md",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/playercore/lua/entities/gmod_wire_expression2/core/custom/cl_playercore.lua",
+		"/C/Users/Axel Michaud/Desktop/index.html",
+		"/C/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+		"/C/Users/Axel Michaud/Projets/cours/cours/cours.userprefs",
+		"/C/Users/Axel Michaud/Projets/cours/cours/Properties/AssemblyInfo.cs",
+		"/C/Users/Axel Michaud/Projets/cours/cours/Program.cs",
+		"/C/Users/Axel Michaud/Projets/cours/cours/cours.csproj",
+		"/C/Users/Axel Michaud/Projets/cours/cours.sln",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_health.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_goto.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sh_kick.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sv_playerinfo.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_sv_init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/autorun/server/ev_autorun.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/cl_autocomplete.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/evolve/lua/ev_plugins/sv_playtime.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/README.md",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/client/player.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/sv.db",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/padmin/core/client/README.md",
+		"/C/Dropbox/SiteWeb/news.php",
+		"/C/Dropbox/SiteWeb/about.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/Rar$DIa0.259/cl_nadmodpp.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/sbam/core/shared/plugins.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/sbam/lib/server/sql.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/sbam/core/client/player_info.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/sbam/lua/sbam/core/server/rank.lua",
+		"/C/Users/Axel Michaud/Desktop/dossier/ulx/lua/ulx/modules/sh/fun.lua",
+		"/C/Users/Axel Michaud/Desktop/dossier/ulx/lua/ulib/modules/ulx_init.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/playx/lua/playx/playx.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/playx/lua/ulib/modules/playx_ulib_group_manager.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/sper_admin/lua/sper_admin/core/sh_sql.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/playx/lua/ev_plugins/sv_playx_evolve_group_manager.lua",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/playx/lua/exsto/plugins/server/playx_exsto_group_manager.lua",
+		"/C/Dropbox/SiteWeb/view/userspace.php",
+		"/C/Dropbox/SiteWeb/controller/userspace.php",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons (off)/sper_admin/lua/core/sh_sql.lua",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp47821/home/axel/www/dev/model/general_values.php",
+		"/C/Dropbox/SiteWeb/index.php",
+		"/C/Dropbox/SiteWeb/core.php",
+		"/C/Dropbox/SiteWeb/model/session_utility.php",
+		"/C/Dropbox/SiteWeb/controller/member.class.php",
+		"/C/Dropbox/SiteWeb/model/member_utility.php",
+		"/C/Dropbox/SiteWeb/model/general_values.php",
+		"/C/Dropbox/SiteWeb/model/utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp24943/home/axel/www/dev/controller/userspace.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp24338/home/axel/www/dev/controller/news.class.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp24741/home/axel/www/dev/controller/member.class.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25742/home/axel/www/dev/model/session_utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25015/home/axel/www/dev/model/news_utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25726/home/axel/www/dev/model/member_utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25165/home/axel/www/dev/model/general_values.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp51309/home/axel/www/dev/model/utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp24286/home/axel/www/dev/controller/logout.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25383/home/axel/www/dev/view/content.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25185/home/axel/www/dev/news/index.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp18618/home/axel/www/index.php",
+		"/C/Dropbox/SiteWeb/controller/logout.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25634/home/axel/www/controller/member.class.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp25455/home/axel/www/model/member_utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp13054/home/axel/www/model/news_utility.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp13551/home/axel/www/model/utility.php",
+		"/C/Dropbox/SiteWeb/uploads.php",
+		"/C/Dropbox/SiteWeb/controller/news.class.php",
+		"/C/Dropbox/SiteWeb/model/news_utility.php",
+		"/F/Steam/steamapps/common/GarrysMod/garrysmod/addons/SRP/lua/simplerp/core/client/hud.lua",
+		"/C/Dropbox/SiteWeb/style/header.css",
+		"/C/Dropbox/SiteWeb/view/header.php",
+		"/C/Dropbox/SiteWeb/style/news.css",
+		"/C/Dropbox/SiteWeb/news/index.php",
+		"/C/Dropbox/SiteWeb/view/news.php",
+		"/C/Dropbox/SiteWeb/model/general_values.php.save",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp01565/home/axel/www/view/home.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp01671/home/axel/www/view/news.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp05234/home/axel/www/model/general_values.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp00693/home/axel/www/news/index.php",
+		"/C/Users/Axel Michaud/AppData/Local/Temp/scp00526/home/axel/www/model/utility.php",
+		"/C/Dropbox/SiteWeb/style/new.css",
+		"/C/Dropbox/SiteWeb/style/userspace.css",
+		"/C/Dropbox/SiteWeb/style/main.css",
+		"/C/Dropbox/SiteWeb/style/smallnews.css",
+		"/C/Dropbox/SiteWeb/view/smallnews.php",
+		"/C/Dropbox/SiteWeb/view/home.php",
+		"/C/Dropbox/SiteWeb/view/content.php",
+		"/C/Dropbox/SiteWeb/model/blog_utility.php",
+		"/C/Users/Axel Michaud/Google Drive/Projets/Site Web/Echo/index.html"
+	],
+	"find":
+	{
+		"height": 21.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons (off)\\ulib,F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons (off)\\ulx",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons (off)\\ulib",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons (off)\\ulx\\lua",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons (off)",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\wire\\lua",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\wire-master\\lua\\entities\\gmod_wire_expression2\\",
+			"F:\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\wire-master\\lua\\entities\\gmod_wire_expression2\\core"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"time.",
+			"navy",
+			"concommand.",
+			"concommand.AutoComplete",
+			"ulx.command",
+			"concommand",
+			"concommand.AutoComplete",
+			"timeplayed",
+			"over",
+			"overr",
+			"registerType",
+			"23452345",
+			"_HUD_PRINTCENTER",
+			"NULL",
+			"noentity()",
+			"Expression2EditorFrame",
+			"dmginfo",
+			"filter",
+			"registerOperator",
+			"registerType",
+			"UpdateKeys",
+			"hook",
+			"player",
+			"playerc",
+			"playercore",
+			"<",
+			"call",
+			"////////////////////////////////////////////////////////////////////////////////////////////////\n",
+			"nike",
+			"end",
+			"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+			"////////////////////////////////////////////////////////////\n",
+			"GetPlayer",
+			"LastJoin",
+			"bett",
+			"TransferRanks",
+			"TransferRank",
+			"TransferRanks",
+			"sql",
+			"\")",
+			"\")\n",
+			"ulib",
+			"ulx",
+			"function",
+			");\n",
+			"include_once",
+			"private",
+			"include_once",
+			"{\n",
+			"0",
+			"%;\"",
+			"LOWER",
+			"username",
+			"password",
+			"birth_date",
+			"firstname",
+			"';\n",
+			"robert",
+			"gray",
+			"220",
+			"/';",
+			"';\n",
+			"Directory",
+			"DocumentRoot",
+			"alia",
+			"langues",
+			"suppress_localhost",
+			"projectContents",
+			"end",
+			"})\n",
+			"ind",
+			"id",
+			"margin",
+			"label",
+			"regenerationrate",
+			"core",
+			"runOnKey",
+			"SimpleRP",
+			"}\n",
+			"),",
+			"en",
+			"HookCall",
+			"SimpleRP.Resources.Textes.SetJob",
+			"	\n",
+			")",
+			"job",
+			"red",
+			">\n",
+			"40px",
+			"squared_metal",
+			";\n",
+			">\n",
+			"Voiture",
+			"\n	font-size: large;",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Time.",
+			">",
+			"fr",
+			"JOB"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rank.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"php",
+				"SiteWeb\\index.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Database.AddPlayer"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

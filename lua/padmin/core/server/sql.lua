@@ -2,16 +2,16 @@ local Database = {}
 
 function Database.Create()
 	if not sql.TableExists("padmin_settings") then
-		sql.Query("CREATE TABLE padmin_settings (name TEXT PRIMARY KEY, variables TEXT);")
+		sql.Query("CREATE TABLE padmin_settings ('name' TEXT PRIMARY KEY, 'variables' TEXT);")
 	end
 	if not sql.TableExists("padmin_ranks") then
-		sql.Query("CREATE TABLE padmin_ranks (rankid TEXT PRIMARY KEY, privileges TEXT, restrictions TEXT, limits TEXT, variables TEXT);")
+		sql.Query("CREATE TABLE padmin_ranks ('rankid' TEXT PRIMARY KEY, 'group' TEXT, 'privileges' TEXT, 'restrictions' TEXT, 'limits' TEXT, 'variables' TEXT);")
 	end
-	if not sql.TableExists("padmin_teams") then
-		sql.Query("CREATE TABLE padmin_teams (teamid TEXT PRIMARY KEY, teamname TEXT, variables TEXT);")
+	if not sql.TableExists("padmin_group") then
+		sql.Query("CREATE TABLE padmin_teams ('groupid' TEXT PRIMARY KEY, 'groupname' TEXT, 'color' TEXT, 'variables' TEXT);")
 	end
 	if not sql.TableExists("padmin_players") then
-		sql.Query("CREATE TABLE padmin_players (steamid TEXT PRIMARY KEY, nickname TEXT, rank TEXT, team TEXT, lastconnection INTEGER, baninfo TEXT, variables Text);")
+		sql.Query("CREATE TABLE padmin_players ('steamid' TEXT PRIMARY KEY, 'nickname' TEXT, 'rank' TEXT, 'group' TEXT, 'timeplayed' INTEGER, 'lastconnection' INTEGER, 'baninfo' TEXT, 'variables' Text);")
 	end
 end
 
@@ -63,8 +63,8 @@ function Database.GetRanks()
 	return {}
 end
 
-function Database.AddRank(rankid, privileges, restrictions, limits, variables)
-	sql.Query("INSERT INTO padmin_ranks VALUES ('" .. rankid .. "', '" .. util.TableToJSON(privileges) .. "', '" .. util.TableToJSON(restrictions) .. "', '" .. util.TableToJSON(limits) .. "', '" .. util.TableToJSON(variables) .. "');")
+function Database.AddRank(rankid, group, privileges, restrictions, limits, variables)
+	sql.Query("INSERT INTO padmin_ranks VALUES ('" .. rankid .. "', '" .. group .. "', '" .. util.TableToJSON(privileges) .. "', '" .. util.TableToJSON(restrictions) .. "', '" .. util.TableToJSON(limits) .. "', '" .. util.TableToJSON(variables) .. "');")
 end
 
 function Database.UpdateRank(rankid, privileges, restrictions, limits, variables)
@@ -90,7 +90,8 @@ function Database.GetPlayer(steamid)
 		local padminply = {
 			nickname = plyinfo.nickname,
 			rank = plyinfo.rank,
-			team = plyinfo.team,
+			group = plyinfo.group,
+			timeplayed = plyinfo.timeplayed,
 			lastconnection = plyinfo.lastconnection,
 			baninfo = util.JSONToTable(plyinfo.baninfo),
 			variables = util.JSONToTable(plyinfo.variables)}
@@ -99,16 +100,16 @@ function Database.GetPlayer(steamid)
 	end
 	return nil
 end
-function Database.AddPlayer(steamid, nickname, rank, team, variables)
-	sql.Query("INSERT INTO padmin_players VALUES ('" .. steamid .. "', '" .. nickname .. "', '" .. rank .. "', '" .. team .. "', '" .. os.time() .. "', '" .. "{}" .. "', '" .. util.TableToJSON(variables) .. "');")
+function Database.AddPlayer(steamid, nickname, rank, variables)
+	sql.Query("INSERT INTO padmin_players VALUES ('" .. steamid .. "', '" .. nickname .. "', '" .. rank .. "', '" .. "', '" .. 0 .. "', '" .. os.time() .. "', '" .. " {}" .. "', '" .. util.TableToJSON(variables) .. "');")
 end
 
-function Database.UpdatePlayer(steamid, nickname, rank, team, lastconnection, baninfo, variables)
-	sql.Query("UPDATE padmin_players nickname='" .. nickname .. "', rank='" .. rank .. "', team='" .. team .. "', lastconnection='" .. lastconnection .. "', baninfo='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', variables='" .. util.TableToJSON(variables) .. "' WHERE steamid='" .. steamid .. "';")
+function Database.UpdatePlayer(steamid, nickname, rank, group, timeplayed, lastconnection, baninfo, variables)
+	sql.Query("UPDATE padmin_players 'nickname'='" .. nickname .. "', 'rank'='" .. rank .. "', 'group'='" .. group .. "', 'timeplayed'='" .. timeplayed .. "', 'lastconnection'='" .. lastconnection .. "', 'baninfo'='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', 'variables'='" .. util.TableToJSON(variables) .. "' WHERE steamid='" .. steamid .. "';")
 end
 
 function Database.SavePlayer(ply)
-	sql.Query("UPDATE padmin_players SET nickname='" .. ply:Nick() .. "', rank='" .. ply.PAdmin.rank .. "', team='" .. ply.PAdmin.team .. "', lastconnection='" .. ply.PAdmin.lastconnection .. "', baninfo='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', variables='" .. util.TableToJSON(ply.PAdmin.variables) .. "' WHERE steamid='" .. ply:SteamID() .. "';")
+	sql.Query("UPDATE padmin_players SET 'nickname'='" .. ply:Nick() .. "', 'rank'='" .. ply.PAdmin.rank .. "', 'group'='" .. ply.PAdmin.group .. "', 'timeplayed'='" .. ply.PAdmin.timeplayed .. "', 'lastconnection'='" .. ply.PAdmin.lastconnection .. "', 'baninfo'='" .. util.TableToJSON(ply.PAdmin.baninfo) .. "', 'variables'='" .. util.TableToJSON(ply.PAdmin.variables) .. "' WHERE steamid='" .. ply:SteamID() .. "';")
 end
 
 function Database.RemovePlayer(steamid)

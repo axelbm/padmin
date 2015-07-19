@@ -1,0 +1,2 @@
+
+PAdmin.Menu = {}
